@@ -19,6 +19,7 @@ app.get('/',function (req, res) {
 });
 
 app.get('/users', function(request , response){
+	response.setHeader('Content-type', 'application/json')
 	response.send(JSON.stringify(userData));
 });
 
